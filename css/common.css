@@ -1,0 +1,28 @@
+.colDetalle{
+	margin-left: 35px;
+	margin-bottom: 10px
+}
+
+.page__content::-webkit-scrollbar, 
+::-webkit-scrollbar {
+  display: block;
+  background-color: white;
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #666; 
+  border: 1px solid white;
+}
+
+.blueIcon{
+
+	color: rgba(24,103,194,0.81);
+}
+
+.blueBorder {
+border: 2px solid rgba(24,103,194,0.81);
+border-radius: 4px;
+}
