@@ -3,10 +3,16 @@
   <ion-content class="padding">
 		
 		<div class="list">
-		  <label class="item item-input">
-		    <input type="text" ng-model="site.url" placeholder="URL">
+
+		<label class="item item-input item-select">
+		    <div class="input-label">
+		      Choose Example
+		    </div>
+		   	<select   ng-options="opt.label for opt in opciones" ng-model="selectedRss.value"></select>
+
 		  </label>
-		  <button ng-disabled="site.url == ''" class="button button-block button-positive" ng-click="getRSSData()" > Get RSS </button>
+
+		  <button ng-disabled="selectedRss.value == null" class="button button-block button-positive" ng-click="getRSSData()" > Get RSS </button>
 
 		</div>
 

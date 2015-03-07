@@ -2,12 +2,18 @@
 angular.module('Controllers', [])
 .controller('RSSController', ['$scope','RSSFeedService', function($scope,RSSFeedService){
 
-	$scope.site = new Object();
-	$scope.site.url = '';
+	  $scope.opciones = new Object();
+	  $scope.opciones = [
+	    { label: 'Example 1', url: "sample-feed.xml" },
+	    { label: 'Example 2', url: "sample.xml" }
+	  ];
+
+	  $scope.selectedRss = new Object();
+	  $scope.selectedRss.value = null;
 
 
     $scope.getRSSData = function() {
-      RSSFeedService.getRSSData($scope.site.url, function(items){
+      RSSFeedService.getRSSData( "resources/" + $scope.selectedRss.value.url, function(items){
         console.log(items)
         $scope.items = items;
         $scope.$apply();
